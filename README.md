@@ -1,0 +1,50 @@
+# Portfolio Rebalancer
+
+Sistema simple para rebalancear portfolios de acciones usando precios reales.
+
+## Instalación
+
+```bash
+pip install finnhub-python python-dotenv
+```
+
+## Configuración
+
+1. Regístrate gratis en [finnhub.io](https://finnhub.io)
+2. Crea archivo `.env`:
+
+```
+FINNHUB_API_KEY=tu_api_key_aqui
+```
+
+## Uso
+
+```python
+from portfolio import Portfolio
+
+# Crear portfolio
+portfolio = Portfolio(
+    spend=10000,
+    allocations={"AAPL": 0.6, "META": 0.4}
+)
+
+# Ver valor actual
+print(f"Valor: ${portfolio.get_portfolio_value():.2f}")
+
+# Rebalancear
+result = portfolio.rebalance({"AAPL": 0.5, "META": 0.3, "TSLA": 0.2})
+print("Vender:", result["to_sell"])
+print("Comprar:", result["to_buy"])
+```
+
+## Archivos
+
+- `stocks.py` - Manejo de precios via Finnhub API
+- `portfolio.py` - Lógica de rebalanceo  
+- `.env` - Tu API key (no commitear)
+
+## Notas
+
+- Solo rebalancea diferencias > $1
+- Soporta acciones fraccionarias
+- Los allocations deben sumar 1.0
