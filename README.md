@@ -1,4 +1,4 @@
-# Portfolio Rebalancer
+# Portfolio Manager
 
 Sistema simple para rebalancear portfolios de acciones usando precios reales.
 
@@ -10,11 +10,11 @@ pip install finnhub-python python-dotenv
 
 ## Configuración
 
-1. Regístrate gratis en [finnhub.io](https://finnhub.io)
+1. Regístrate en [finnhub.io](https://finnhub.io) (es gratis)
 2. Crea archivo `.env`:
 
 ```
-FINNHUB_API_KEY=tu_api_key_aqui
+FINNHUB_API_KEY = tu_api_key
 ```
 
 ## Uso
