@@ -1,6 +1,6 @@
-# Portfolio Manager
+# Portafolio Manager
 
-Sistema simple para rebalancear portfolios de acciones usando precios reales.
+Clase que nos ayuda a rebalancear portafolios de acciones.
 
 ## Instalación
 
@@ -41,7 +41,7 @@ print("Comprar:", result["to_buy"])
 
 - `stocks.py` - Manejo de precios via Finnhub API
 - `portfolio.py` - Lógica de rebalanceo  
-- `.env` - Tu API key (no commitear)
+- `.env` - Tu API key
 
 ## Notas
 
